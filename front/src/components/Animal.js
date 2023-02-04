@@ -19,6 +19,9 @@ const Animal = ({ img }) => {
         setX(Math.random() * maxX);
         setY(Math.random() * maxY);
       }}
+      onClick={() => {
+        alert("hello");
+      }}
     />
   );
 };
