@@ -17,9 +17,9 @@ const Main = (props) => {
         현재 3마리의 친구들이 놀고 있어요!
       </MainMessage>
       {dogList.map((dog) => (
-        <Animal img={dog} />
+        <Animal img={dog}> </Animal>
       ))}
-      <AnimalInfo></AnimalInfo>
+      {/* <AnimalInfo></AnimalInfo> */}
     </MainContainer>
   );
 };
@@ -31,7 +31,8 @@ const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
   height: 100vh;
-  width: 100%;
+  width: 100vw;
+  margin: 0;
   align-items: center;
   background-image: url(${backgroundImg});
 `;

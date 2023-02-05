@@ -6,8 +6,8 @@ const Animal = ({ img }) => {
   const maxX = window.innerWidth;
   const maxY = window.innerHeight;
 
-  const [x, setX] = useState(Math.random() * -400);
-  const [y, setY] = useState(Math.random() * 100);
+  const [x, setX] = useState(Math.random() * maxX);
+  const [y, setY] = useState(Math.random() * maxY);
 
   return (
     <motion.img
@@ -18,9 +18,6 @@ const Animal = ({ img }) => {
       onAnimationComplete={() => {
         setX(Math.random() * maxX);
         setY(Math.random() * maxY);
-      }}
-      onClick={() => {
-        alert("hello");
       }}
     />
   );
