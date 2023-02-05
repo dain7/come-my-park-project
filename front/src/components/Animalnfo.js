@@ -3,16 +3,13 @@ import "../assets/css/animal.css";
 import styled from "styled-components";
 import brownDogImg from "../assets/image/brownDog.png";
 
-const AnimalInfo = (img) => {
+const AnimalInfo = ({ name, mbti, img, info }) => {
   return (
     <InfoContainer>
-      <AnimalName>콩이</AnimalName>
-      <AnimalMbti>ISTJ</AnimalMbti>
+      <AnimalName>{name}</AnimalName>
+      <AnimalMbti>{mbti}</AnimalMbti>
       <AnimalImage src={brownDogImg}></AnimalImage>
-      <AnimalInformation>
-        한번 시작한 일은 끝까지 해내는 의지의 강아지. <br />
-        책임감, 정직함, 공과사 구분이 철저하다.
-      </AnimalInformation>
+      <AnimalInformation>{info}</AnimalInformation>
     </InfoContainer>
   );
 };
@@ -67,7 +64,7 @@ const AnimalImage = styled.img`
 const AnimalInformation = styled.div`
   text-align: center;
   font-size: medium;
-  margin-top: 15px;
+  margin-top: 45px;
   width: 100%;
   height: 100%;
 `;

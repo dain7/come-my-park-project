@@ -2,13 +2,25 @@ import React from "react";
 import styled from "styled-components";
 import backgroundImg from "../assets/image/grass.jpeg";
 import Animal from "../components/Animal";
-import AnimalInfo from "../components/Animalnfo";
-import whiteDogImg from "../assets/image/whiteDog.png";
-import blackDogImg from "../assets/image/blackDog.png";
-import brownDogImg from "../assets/image/brownDog.png";
 
 const Main = (props) => {
-  const dogList = [whiteDogImg, blackDogImg, brownDogImg];
+  const dogList = [
+    {
+      name: "콩이",
+      mbti: "ISTJ",
+      info: "~~~~~~~~~~~",
+    },
+    {
+      name: "왈왈이",
+      mbti: "ENTP",
+      info: "~~~~~$$$$$$$$$$$$$$^^^~~~~~~ <br/> ~~~~~~~~~~~~~~~~~~~!!!",
+    },
+    {
+      name: "덕구",
+      mbti: "ISFP",
+      info: "~~~~~~~~~~~",
+    },
+  ];
 
   return (
     <MainContainer>
@@ -17,9 +29,8 @@ const Main = (props) => {
         현재 3마리의 친구들이 놀고 있어요!
       </MainMessage>
       {dogList.map((dog) => (
-        <Animal img={dog}> </Animal>
+        <Animal name={dog.name} mbti={dog.mbti} info={dog.info}></Animal>
       ))}
-      {/* <AnimalInfo></AnimalInfo> */}
     </MainContainer>
   );
 };
